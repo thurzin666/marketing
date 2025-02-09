@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Aviator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Fundo escuro com efeito gradiente */
+        body {
+            background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Cabeçalho com efeito neon */
+        header {
+            font-size: 28px;
+            font-weight: bold;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 15px #9400FF;
+            text-shadow: 0 0 15px #9400FF;
+            border-radius: 10px;
+        }
+
+        /* Container principal com sombra neon */
+        .container {
+            margin: 50px auto;
+            max-width: 600px;
+            background: rgba(20, 20, 20, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px #9400FF;
+            transition: 0.3s;
+        }
+
+        .container:hover {
+            box-shadow: 0px 0px 30px #9400FF;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #9400FF;
+        }
+
+        .descricao {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            color: #ccc;
+        }
+
+        /* Estilização dos botões */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        button {
+            width: 100%; /* Garantir que os botões tenham o mesmo tamanho */
+            background: #9400FF;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px #9400FF;
+            transition: all 0.3s ease-in-out;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #7B00CC;
+            box-shadow: 0px 0px 30px #9400FF;
+            transform: scale(1.05);
+        }
+
+        /* Desabilitado (Iniciar bot) */
+        .disabled {
+            background: transparent;
+            color: #7F7F7F;
+            border: 2px solid #7F7F7F;
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+
+        .disabled:hover {
+            background: transparent;
+            box-shadow: none;
+            transform: none;
+        }
+
+        /* Lista de benefícios */
+        .beneficios {
+            font-size: 18px;
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        .beneficios p {
+            margin: 10px 0;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .beneficios p::before {
+            content: "✔";
+            color: #00FF00;
+            font-size: 20px;
+            text-shadow: 0 0 5px #00FF00;
+        }
+
+        /* Chamada para ação com brilho neon */
+        .cta {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #00FF00;
+            text-shadow: 0 0 15px #00FF00;
+            animation: pulsar 1.5s infinite alternate;
+        }
+
+        @keyframes pulsar {
+            from {
+                text-shadow: 0 0 10px #00FF00;
+            }
+            to {
+                text-shadow: 0 0 20px #00FF00;
+            }
+        }
+
+        /* Rodapé com efeito futurista */
+        footer {
+            background: #111;
+            color: #9400FF;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 14px;
+            text-shadow: 0 0 5px #9400FF;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #9400FF;
+        }
+
+        /* Ícone do cadeado ao lado do segundo botão */
+        .cadeado {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        /* Passos */
+        .passos {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 0 10px #9400FF;
+        }
+
+        .passos h3 {
+            margin-bottom: 15px;
+            color: #9400FF;
+            font-size: 22px;
+            text-shadow: 0 0 10px #9400FF;
+        }
+
+        .passo {
+            font-size: 18px;
+            margin: 15px 0;
+            color: #ccc;
+            text-align: left;
+            font-weight: bold;
+            text-shadow: 0 0 5px #9400FF;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        BOT AVIATOR 🚀
+    </header>
+
+    <section class="container">
+        <h2>Inicie o Bot Aviator</h2>
+
+        <p class="descricao">
+            O <strong>Bot Aviator</strong> utiliza inteligência artificial para analisar padrões do jogo 
+            e identificar os melhores momentos para apostar e sacar automaticamente.  
+            Com uma taxa de acerto de 90%, ele maximiza seus lucros enquanto minimiza riscos, 
+            funcionando 24 horas por dia sem interrupções!
+        </p>
+
+        <!-- Container para os botões, com espaço entre eles -->
+        <div class="button-container">
+            <!-- Primeiro botão com link adicionado -->
+            <a href="https://media1.placard.co.mz/redirect.aspx?pid=8252&bid=1514" target="_blank" id="primeiroBotao" onclick="habilitarBot()">
+                <button>Criar conta e fazer o primeiro depósito</button>
+            </a>
+
+            <!-- Segundo botão com link do WhatsApp (inicialmente desabilitado) -->
+            <a href="https://wa.me/258834476497" target="_blank" id="iniciarBotLink">
+                <button id="iniciarBot" class="disabled" onclick="ativarLink()">
+                    Iniciar bot
+                    <span class="cadeado">🔒</span>
+                </button>
+            </a>
+        </div>
+
+        <div class="beneficios">
+            <p>200% no primeiro depósito</p>
+            <p>Bot com 90% de assertividade</p>
+            <p>Funciona 24h por dia</p>
+        </div>
+
+        <p class="cta">🔥 Comece já para ganhar muito dinheiro no Aviator! 🔥</p>
+
+        <!-- Passos -->
+        <div class="passos">
+            <h3>Como Funciona:</h3>
+            <p class="passo">1️⃣ <strong>Criar uma conta</strong> na casa de apostas e fazer o primeiro depósito.</p>
+            <p class="passo">2️⃣ <strong>Iniciar o bot</strong> e deixe que ele trabalhe 24h para maximizar seus lucros.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Bot Aviator - Todos os direitos reservados.
+    </footer>
+
+    <script>
+        // Função chamada ao clicar no link do primeiro botão
+        function habilitarBot() {
+            // Habilita o segundo botão após o clique
+            document.getElementById('iniciarBot').classList.remove('disabled');
+        }
+
+        // Função para permitir o link do WhatsApp após o primeiro botão ser clicado
+        function ativarLink() {
+            if (document.getElementById('iniciarBot').classList.contains('disabled')) {
+                event.preventDefault(); // Impede o redirecionamento
+            }
+        }
+    </script>
+
+</body>
+</html>
